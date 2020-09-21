@@ -43,17 +43,16 @@ app.get("/weather", (req, res) => {
     });
   }
 
-  geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
-    if (error) {
-      return res.send({
-        error: error,
-      });
-    }
+  geocode(
+    req.query.address,
+    (error, { latitude, longitude, location } = {}) => {
+      if (error) {
+        return res.send({
+          error: error,
+        });
+      }
 
-    forecast(
-      latitude,
-      longitude,
-      (error, forecast) => {
+      forecast(latitude, longitude, (error, forecast) => {
         if (error) {
           return res.send({
             error: error,
@@ -65,14 +64,9 @@ app.get("/weather", (req, res) => {
           location: location,
           address: req.query.address,
         });
-      }
-    );
-  });
-
-  
-
-
-
+      });
+    }
+  );
 });
 
 app.get("/products", (req, res) => {
@@ -104,6 +98,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is up");
 });
