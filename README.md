@@ -8,7 +8,7 @@
   - NodeJS
   - Visual Studio
 
-##  Technologies
+##  Modules
   - express
   - request
   - hbs
