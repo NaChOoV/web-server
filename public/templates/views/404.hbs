@@ -2,18 +2,19 @@
 <html>
 
 <head>
-    <title>404 Not found</title>
-    <link rel="icon" href="img/weather.png">
-    <link rel="stylesheet" href="css/styles.css">
+  <title>404 Not found</title>
+  <link rel="icon" href="img/weather.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>{{errorMessage}}</p>
+  {{>header}}
+  <div class="impostor">
+    <div class="main-content contenedor-principal pico">
+      <p>{{errorMessage}}</p>
     </div>
-
-    {{>footer}}
+  </div>
+  {{>footer}}
 </body>
 
 </html>
