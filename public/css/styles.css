@@ -1,56 +1,97 @@
-body {
-  color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 0 16px;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-.main-content{
-  flex-grow: 1;
-}
-
-footer {
-  color: #888888;
-  border-top: 1px solid #eeeeee;
-  margin-top: 16px;
-  padding: 16px 0;
-}
-
-header {
-  margin-top: 16px;
-  margin-bottom: 48px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 h1 {
-  font-size: 64px;
-  margin-bottom: 16px;
-}
-
-header a {
-  color: #888888;
-  margin-right: 16px;
   text-decoration: none;
 }
 
-.portrait {
-  width: 250px;
+body {
+  font-size: 4rem;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.main-content {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.fondo-header {
+  background-color: black;
+}
+.back{
+  background-image: url(../img/space.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-content.contenedor-principal p{
+  color: white;
+  text-align: center;
+}
+.main-content.contenedor-principal.pico p {
+  color: black;
+}
+.impostor{
+  background-image: url(../img/lol.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contenedor a {
+  color: white;
+}
+
+.final {
+  padding: 3rem 2rem;
+  background-color: black;
+  color: white;
+}
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: auto;
+  justify-content: center;
+}
+
+.navegacion {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.navegacion a, .contenedor a {
+  text-decoration: none;
+}
+
+.buscador {
+  display: grid;
+  grid-template-columns: 70% 30%;
 }
 
 input {
   border: 1px solid #cccccc;
   padding: 8px;
 }
-button{
+
+button {
   cursor: pointer;
   border: 1px solid #888888;
   background: #888888;
   color: white;
-  padding: 8px;
-
+  padding: 1rem;
 }
-
