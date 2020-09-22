@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node src/app.js"
+=======
+    "start":"nodemon src/app.js -e js,hbs,css"
+>>>>>>> 6555c1b8b285e25deca8bb30481f818d2e0ad460
   },
   "keywords": [],
   "author": "",

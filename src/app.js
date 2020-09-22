@@ -14,6 +14,8 @@ app.set("views", path.join(__dirname, "../public/templates/views"));
 
 hbs.registerPartials(path.join(__dirname, "../public/templates/partials"));
 
+const port = process.env.PORT || 3000;
+
 app.get("/", (req, res) => {
   res.render("index", {
     tittle: "Weather App",
@@ -98,6 +100,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is up");
+app.listen(port, () => {
+  console.log("Server is up on port", port);
 });
